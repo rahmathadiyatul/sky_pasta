@@ -1,0 +1,13 @@
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.lower-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    margin-bottom: 2em;
+}

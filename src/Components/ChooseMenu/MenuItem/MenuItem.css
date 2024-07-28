@@ -1,0 +1,27 @@
+.menu-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 3em;
+}
+
+.menu-name {
+    width: 30vw;
+}
+
+.div-image {
+    display: flex;
+    width: 23vw;
+    height: 23vw;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 0;
+}
+
+.div-image img {
+    width: 30vw;
+}

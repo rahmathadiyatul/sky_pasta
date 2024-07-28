@@ -1,40 +1,41 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.editor {
-    margin: 2em 0;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: center;
-    gap: 2vw;
-}
-
-.canvas-properties {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1em;
+    text-align: center;
+    gap: 5%;
 }
 
-.image-field {
-    border: 1px solid black;
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
 }
 
-.image-properties {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.user-input {
-    width: 20vw;
+.choose-menu {
+    width: 70vw;
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
-.file-upload {}
+.menu-details {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
