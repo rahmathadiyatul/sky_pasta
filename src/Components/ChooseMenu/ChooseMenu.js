@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import '../ChooseMenu/ChooseMenu.css'
-import MenuItem from './MenuItem/MenuItem'
+import React, { useState } from 'react';
+import './ChooseMenu.css';
+import MenuItem from './MenuItem/MenuItem';
 import LowerItem from './LowerItem/LowerItem';
 
 const ChooseMenu = () => {
+    const [slide, setSlide] = useState(false);
+
+    const handleLowerMenuClick = () => {
+        setSlide(!slide);
+    };
+
     return (
         <div className='menu-container'>
             <div className='upper-menu'>
-                <MenuItem></MenuItem>
-                <MenuItem isHidden={true}></MenuItem>
+                <MenuItem slide={slide}></MenuItem>
             </div>
             <div className='lower-menu'>
-                <LowerItem menuName='Spaghetti' imgUrl='https://res.cloudinary.com/dxyxg3egs/image/upload/v1722157379/skypasta/2_supf1m.png'></LowerItem>
-                <LowerItem menuName='Pasta' imgUrl='https://res.cloudinary.com/dxyxg3egs/image/upload/v1722157378/skypasta/1_jl9jtt.png'></LowerItem>
+                <LowerItem onLowerMenuClick={handleLowerMenuClick} menuName='Samba Lado Spaghetti' imgUrl='https://res.cloudinary.com/dxyxg3egs/image/upload/v1722157379/skypasta/2_supf1m.png'></LowerItem>
+                <LowerItem onLowerMenuClick={handleLowerMenuClick} menuName='Pasta Apadah Tau' imgUrl='https://res.cloudinary.com/dxyxg3egs/image/upload/v1722157378/skypasta/1_jl9jtt.png'></LowerItem>
             </div>
         </div>
     );

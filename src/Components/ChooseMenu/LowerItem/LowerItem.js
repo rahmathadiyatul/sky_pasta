@@ -1,12 +1,18 @@
+import React from 'react';
 import { Typography } from '@mui/material';
-import React, { useState, useEffect } from 'react';
+import '../ChooseMenu.css';
 
-const LowerItem = (param) => {
-    const { menuName, imgUrl } = param
+const LowerItem = ({ menuName, imgUrl, onLowerMenuClick }) => {
+    const handleClick = () => {
+        if (onLowerMenuClick) {
+            onLowerMenuClick();
+        }
+    };
+
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <img style={{ width: '5em' }} src={imgUrl}></img>
-            <Typography>{menuName}</Typography>
+        <div onClick={handleClick} className='lower-menu-card'>
+            <img style={{ width: '5em' }} src={imgUrl} alt='Lower Item'></img>
+            <Typography variant='h2' sx={{ fontSize: '1em', fontWeight: 'bolder', display: 'block' }}>{menuName}</Typography>
         </div>
     );
 };

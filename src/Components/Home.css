@@ -28,13 +28,14 @@
 }
 
 .choose-menu {
-    width: 70vw;
+    width: 60vw;
     position: relative;
     z-index: 1;
     text-align: center;
 }
 
 .menu-details {
+    width: 40vw;
     position: relative;
     z-index: 1;
     text-align: center;
