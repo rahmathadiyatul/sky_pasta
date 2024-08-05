@@ -5,7 +5,7 @@ import '../ChooseMenu.css';
 const LowerItem = ({ menuName, imgUrl, onLowerMenuClick }) => {
     const handleClick = () => {
         if (onLowerMenuClick) {
-            onLowerMenuClick();
+            onLowerMenuClick(menuName);
         }
     };
 

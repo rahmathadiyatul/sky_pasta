@@ -3,11 +3,14 @@ import './ChooseMenu.css';
 import MenuItem from './MenuItem/MenuItem';
 import LowerItem from './LowerItem/LowerItem';
 
-const ChooseMenu = () => {
+const ChooseMenu = ({ onMenuChange }) => {
     const [slide, setSlide] = useState(false);
 
-    const handleLowerMenuClick = () => {
+    const handleLowerMenuClick = (menu) => {
         setSlide(!slide);
+        if (onMenuChange) {
+            onMenuChange(menu);
+        }
     };
 
     return (
