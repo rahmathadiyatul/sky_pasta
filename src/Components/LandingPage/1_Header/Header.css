@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 98.5vw;
+    font-family: 'Nunito', sans-serif;
+}
+
+.left-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #c72026;
+    align-items: center;
+}
+
+.navbar{
+    margin-right: 4%;
+}
+
+.navbar li a {
+    font-weight: 500;
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.full-logo {
+    display: flex;
+    align-items: center;
+    margin: 1% 4%;
+}
+
+.logo {
+    width: 7.5em;
+    height: 5em;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-items li {
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-items li a {
+    transition: color .5s ease, text-shadow .5s ease, text-decoration .5s ease, padding-bottom .3s ease;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 3;
+    font-weight: 400;
+}
+
+.nav-items li a:hover {
+    color: #f7dfaf;
+    text-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    text-decoration: underline;
+    padding-bottom: 10%;
+}
+
+.dropdown {
+    display: flex;
+    gap: 8px;
+    align-self: stretch;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 6px;
+    padding: .5em 0;
+    border: .01px solid rgb(239, 232, 232);
+    z-index: 1;
+}
+
+.dropdown li {
+    background: white;
+}
+
+.dropdown li:hover {
+    background: var(--background-background, #e8e4e4);
+}
+
+.dropdown li:last-child {
+    border-right: none;
+}
+
+.nav-items li:hover .dropdown {
+    display: flex;
+}
+
+.menu {
+    display: none;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: none;
+        margin: none;
+        color: #BD0304;
+        width: 15vw;
+        height: 4vh;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-header {
+        width: 100vw;
+    }
+
+    .nav-items {
+        display: none;
+    }
+}
