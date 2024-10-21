@@ -18,7 +18,7 @@ const OurHistory = () => {
     }, [images.length]);
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: {xs: 300, sm: 400, md: 600} }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: {xs: 300, sm: 400, md: 600}, mb: {xs: 0, sm: 10, md: 10}}}>
             <Typography
                 sx={{
                     textAlign: {xs: 'left', sm: 'left', md: 'left'},
