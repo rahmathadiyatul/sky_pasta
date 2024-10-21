@@ -4,17 +4,50 @@ import './BodyPreview.css'
 
 const OurActivity = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '5em 5em', height: 'max-content' }}>
-            <Typography class='partners-text'>Our Partnership</Typography>
-            <Box class='partners-icons'>
-                <img style={{ width: '10em', height: '4em'}} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704112/bossku/partners/ministry_qj0y0a.jpg'></img>
-                <img style={{ width: '3em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704112/bossku/partners/Seal_of_Tasikmalaya_Regency.svg_cpddef.png'></img>
-                <img style={{ width: '4em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704111/bossku/partners/YlxlZjWW_400x400_nmb14d.jpg'></img>
-                <img style={{ width: '6em', height: '1.5em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1701617589/bossku/ProjectCard/7ba21ea5-3047-4b3e-9751-f148dc9f4434_foto_1_cj8mk0.png'></img>
-                <img style={{ width: '7em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704111/bossku/partners/international-fund-for-agricultural-development-ifad-vector-logo_cxnhk4.png'></img>
-                <img style={{ width: '7em', height: '4em' }} src='https://res.cloudinary.com/dxyxg3egs/image/upload/v1702704111/bossku/partners/download_e4wgtp.png'></img>
-            </Box >
-        </div >
+        <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row', md: 'row'}, alignItems: 'center', height: 'max-content', borderTop: '10px solid black', }}>
+            <Box sx={{ mt: {xs: 2, sm: 5, md: 10}, display: 'flex', flexDirection: 'column', alignItems: {xs: 'flex-start', sm: 'center', md: 'center'}, justifyContent: 'center' }}>
+                <Typography
+                    sx={{
+                        textAlign:'left',
+                        width: {xs: 300, sm: 400, md: 500},
+                        fontSize: 50,
+                        fontWeight: 'bolder',
+                        fontFamily: 'nunito',
+                        lineHeight: 1 
+                    }}>Sky Pasta</Typography>
+                <Typography
+                    sx={{
+                        textAlign:'left',
+                        width: {xs: 300, sm: 400, md: 500},
+                        fontSize: 50,
+                        fontFamily: 'nunito',
+                        lineHeight: 1 
+                    }}>Activities</Typography>
+                <Typography
+                    sx={{
+                        mt: 5,
+                        mr: 4,
+                        textAlign: {xs: 'right', sm: 'left', md: 'left'},
+                        width: {xs: 300, sm: 400, md: 500},
+                        fontSize: 16,
+                        fontFamily: 'roboto'
+                    }}>Apa ya? Apa nih? Sky Pasta ngapain sih? Gatau deh ngapain coba? Ini di sini mau diisi apa aku juga bingung, kunaon maneh teh? Ini teh naon coba? Apa ya apa dong? Panjangin lagi deh, panjaaaaaaaaang ayo lebih panjang.</Typography>
+            </Box>
+            <Box sx={{ mt: 10 }}>
+                <Box
+                    sx={{
+                        border: '2px solid black',
+                        borderRadius: 4,
+                        width: {xs: 300, sm: 400, md: 500},
+                        height: {xs: 300, sm: 400, md: 500},
+                        background: `url(/sky_pasta_act.png)`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        mb: {xs: 5, sm: 0, md: 0}
+                    }}
+                ></Box>
+            </Box>
+        </Box >
     )
 }
 

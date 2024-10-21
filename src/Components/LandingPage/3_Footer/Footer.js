@@ -1,30 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Box } from '@mui/material';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import { Box, CardMedia, Typography } from '@mui/material';
 
 const Footer = () => {
 
     return (
-        <div className='footer'>
-            <Box class='upper-footer'>
-                <Box class='left-footer'>
-                    <div className='full-logo'>
-                        <Link to='/landing-page'>
-                            <img
-                            className='logo'
-                            src="https://res.cloudinary.com/dxyxg3egs/image/upload/v1724437471/skypasta/skypasta_logo_nobg_myujfv.png"
-                            alt="skypasta-logo"
-                            />
-                        </Link>
-                    </div>
-                </Box>
-                <Box class='right-footer'></Box>
+        <Box sx={{display: 'flex', flexDirection: 'column', height: {xs: 100, sm: 100, md: 150}, backgroundColor: 'black'}}>
+            <Box>
+                <CardMedia
+                    sx={{ width: 90, height: 60, ml: 3, mt: 3}}
+                    image='https://res.cloudinary.com/dxyxg3egs/image/upload/v1724437471/skypasta/skypasta_logo_nobg_myujfv.png'
+                    title='sky-pasta-black-bg'
+                >
+                </CardMedia>
             </Box>
-            <Box class='lower-footer'>
-                <span>Copyright &copy; 2024 <b>Sky Pasta</b></span>
+            <Box sx={{width: '100%', height: 100, backgroundColor: 'black', pb: 2}}>
+                <Typography sx={{textAlign: 'center', color: 'white'}}>
+                    Copyright &copy; 2024 <b>Sky Pasta</b>
+                </Typography>
             </Box>
-        </div>
+        </Box>
     );
 };
 
