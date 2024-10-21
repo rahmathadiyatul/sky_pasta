@@ -1,5 +1,39 @@
 .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     height: 30vh;
     background-color: black;
     margin-top: auto;
+}
+
+.upper-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100vw;
+}
+
+.left-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-footer .logo {
+    position: relative;
+    left: 2em;
+    top: 2em;
+}
+
+.lower-footer {
+
+}
+
+.lower-footer span{
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: -3em;
 }

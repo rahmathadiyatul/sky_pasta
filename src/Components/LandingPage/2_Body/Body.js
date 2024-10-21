@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Body.css';
-import OurPartners from './OurPartners/OurPartners';
+import OurPartners from './BodyPreview/OurPartners';
+import OurHistory from './BodyPreview/OurHistory';
+import OurActivity from './BodyPreview/OurActivity';
 import { Box } from '@mui/material';
 
 const Body = () => {
@@ -14,6 +16,8 @@ const Body = () => {
                 allowFullScreen>
             </iframe>
             <OurPartners></OurPartners>
+            <OurHistory></OurHistory>
+            <OurActivity></OurActivity>
         </div>
     );
 };
